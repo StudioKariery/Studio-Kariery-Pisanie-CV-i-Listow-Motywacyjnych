@@ -159,14 +159,15 @@ header {
     font-size: 20px;
     color: #333;
     font-weight: 600;
-    margin-top: 60px; /* miejsce na ikonę */
+    margin-top: 90px; /* więcej miejsca na ikonę */
     position: relative;
+    min-height: 40px; /* zabezpieczenie przy dłuższych tytułach */
 }
 
 .box h3::before {
     content: attr(data-icon);
     position: absolute;
-    top: -55px;
+    top: -80px; /* ikona wyżej, nie nachodzi */
     left: 50%;
     transform: translateX(-50%);
     background: #c8a27e;
@@ -180,7 +181,6 @@ header {
     font-size: 32px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-
 .box p {
     font-size: 16px;
     color: #555;
@@ -364,6 +364,7 @@ header {
 </body>
 
 </html>
+
 
 
 
