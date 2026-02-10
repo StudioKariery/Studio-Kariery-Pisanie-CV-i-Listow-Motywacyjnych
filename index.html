@@ -90,22 +90,40 @@ header {
     }
 }
         
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #f5fff5, #e8fbe8);
+    border-bottom: 2px solid #008000;
+}
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: #f5fff5;
-        }
+.hero h1 {
+    font-size: 48px;
+    color: #008000;
+    margin-bottom: 10px;
+}
 
-        .hero h1 {
-            font-size: 42px;
-            color: #008000;
-        }
+.hero-subtitle {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 30px;
+}
 
-        .hero h3 {
-            font-size: 22px;
-            color: #cc0000;
-        }
+.hero-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #008000;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #006600;
+}
+        
 
         section {
             max-width: 900px;
@@ -172,9 +190,10 @@ header {
 <!-- POLSKA WERSJA -->
 <div id="pl">
 
-    <div class="hero">
-        <h1>Profesjonalne CV i Listy Motywacyjne</h1>
-        <h3>Z nami się wyróżnisz</h3>
+       <div class="hero">
+        <h1>Profesjonalne CV i Listy Motywacyjne dla rynku UK</h1>
+        <p class="hero-subtitle">Tworzę dokumenty, które wyróżniają Cię wśród kandydatów</p>
+        <a href="#contact" class="hero-btn">Zamów CV</a>
     </div>
 
     <section>
@@ -271,6 +290,7 @@ header {
 </body>
 
 </html>
+
 
 
 
