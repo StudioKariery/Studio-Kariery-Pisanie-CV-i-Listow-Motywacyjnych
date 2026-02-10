@@ -249,6 +249,7 @@ header {
 
     <section id="services">
         <h2>Usługi</h2>
+    </section>
        <div class="box-container">
     <div class="box">
        <h3 data-icon="📄">Tworzenie / aktualizacja CV</h3>
@@ -317,7 +318,6 @@ header {
 </div>
     <section id="services-en">
         <h2>Services</h2>
-       
     </section>
 
     <section id="pricing-en">
@@ -340,7 +340,7 @@ header {
     © 2026 Studio Kariery – All rights reserved
 </footer>
 
-<script>
+ <script>
     const plBtn = document.getElementById("plBtn");
     const enBtn = document.getElementById("enBtn");
     const pl = document.getElementById("pl");
@@ -351,6 +351,19 @@ header {
     const navContact = document.getElementById("nav-contact");
 
     function updateMenuLinks(language) {
+
+        // ZMIANA TEKSTÓW MENU
+        if (language === "PL") {
+            navServices.textContent = "Usługi";
+            navPricing.textContent = "Cennik";
+            navContact.textContent = "Kontakt";
+        } else {
+            navServices.textContent = "Services";
+            navPricing.textContent = "Pricing";
+            navContact.textContent = "Contact";
+        }
+
+        // PRZEWIJANIE DO ODPOWIEDNICH SEKCJI
         if (language === "PL") {
             navServices.onclick = () => document.getElementById("services").scrollIntoView();
             navPricing.onclick = () => document.getElementById("pricing").scrollIntoView();
@@ -362,6 +375,7 @@ header {
         }
     }
 
+    // DOMYŚLNIE PL
     updateMenuLinks("PL");
 
     plBtn.onclick = () => {
@@ -379,11 +393,12 @@ header {
         plBtn.classList.remove("active");
         updateMenuLinks("EN");
     };
-</script>  
+</script> 
 
 </body>
 
 </html>
+
 
 
 
