@@ -136,21 +136,63 @@ header {
             border-left: 5px solid #cc0000;
             padding-left: 10px;
         }
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
 
-        .box-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+.box {
+    background: linear-gradient(180deg, #faf7f2 0%, #ffffff 100%);
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid #e6d8c8;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: center;
+    position: relative;
+}
 
-        .box {
-            flex: 1;
-            min-width: 250px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border: 2px solid #008000;
-        }
+/* Złote kółko za ikoną (emoji) */
+.box h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 60px; /* miejsce na ikonę */
+    position: relative;
+}
+
+.box h3::before {
+    content: attr(data-icon);
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #c8a27e;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Hover efekt premium */
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+       
 
         footer {
             text-align: center;
@@ -209,17 +251,17 @@ header {
         <h2>Usługi</h2>
        <div class="box-container">
     <div class="box">
-        <h3>📄 Tworzenie / aktualizacja CV</h3>
-        <p>Profesjonalne CV w języku angielskim.</p>
+       <h3 data-icon="📄">Tworzenie / aktualizacja CV</h3>
+       <p>Profesjonalne CV w języku angielskim.</p>
     </div>
 
     <div class="box">
-        <h3>✉️ Pisanie listów motywacyjnych</h3>
+    <h3 data-icon="✉️">Pisanie listów motywacyjnych</h3>    
         <p>Indywidualnie dopasowany list motywacyjny.</p>
     </div>
 
     <div class="box">
-        <h3>📁 Końcowy produkt w dwóch plikach</h3>
+     <h3 data-icon="📁">Końcowy produkt w dwóch plikach</h3>   
         <p>Plik .docx do edycji oraz gotowy PDF do wysłania pracodawcy.</p>
     </div>
 </div> 
@@ -259,16 +301,16 @@ header {
     </p>
 <div class="box-container">
     <div class="box">
-        <h3>📄 CV Creation / Rewrite</h3>
+        <h3 data-icon="📄">CV Creation / Rewrite</h3>
         <p>Full professional CV written in English.</p>
     </div>
 
     <div class="box">
-        <h3>✉️ Cover Letter Writing</h3>
+        <h3 data-icon="✉️">Cover Letter Writing</h3>
         <p>Tailored cover letter for your application.</p>
     </div>
 <div class="box">
-    <h3>📁 Final product delivered in two files</h3>
+    <h3 data-icon="📁">Final product delivered in two files</h3>
     <p>You receive an editable .docx file and a ready‑to‑send PDF for your application.</p>
 </div>
     
@@ -322,6 +364,7 @@ header {
 </body>
 
 </html>
+
 
 
 
