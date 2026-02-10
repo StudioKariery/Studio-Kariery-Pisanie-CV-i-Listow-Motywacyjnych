@@ -216,12 +216,11 @@ header {
         <span class="brand-name">Studio Kariery</span>
     </div>
 
-    <nav class="main-nav">
-        <a href="#pl">Strona główna</a>
-       <a id="nav-services">Usługi</a>
-       <a id="nav-pricing">Cennik</a>
-       <a id="nav-contact">Kontakt</a>
-    </nav>
+   <nav class="main-nav">
+    <a id="nav-home">Strona główna</a>
+    <a id="nav-services">Usługi</a>
+    <a id="nav-contact">Kontakt</a>
+</nav>
 
     <div class="lang-switch">
         <span id="plBtn" class="active">PL</span>
@@ -347,7 +346,6 @@ header {
     const en = document.getElementById("en");
 
     const navServices = document.getElementById("nav-services");
-    const navPricing = document.getElementById("nav-pricing");
     const navContact = document.getElementById("nav-contact");
 
     function updateMenuLinks(language) {
@@ -355,22 +353,18 @@ header {
         // ZMIANA TEKSTÓW MENU
         if (language === "PL") {
             navServices.textContent = "Usługi";
-            navPricing.textContent = "Cennik";
             navContact.textContent = "Kontakt";
         } else {
             navServices.textContent = "Services";
-            navPricing.textContent = "Pricing";
             navContact.textContent = "Contact";
         }
 
         // PRZEWIJANIE DO ODPOWIEDNICH SEKCJI
         if (language === "PL") {
             navServices.onclick = () => document.getElementById("services").scrollIntoView();
-            navPricing.onclick = () => document.getElementById("pricing").scrollIntoView();
             navContact.onclick = () => document.getElementById("contact").scrollIntoView();
         } else {
             navServices.onclick = () => document.getElementById("services-en").scrollIntoView();
-            navPricing.onclick = () => document.getElementById("pricing-en").scrollIntoView();
             navContact.onclick = () => document.getElementById("contact-en").scrollIntoView();
         }
     }
@@ -393,11 +387,11 @@ header {
         plBtn.classList.remove("active");
         updateMenuLinks("EN");
     };
-</script> 
-
+</script>
 </body>
 
 </html>
+
 
 
 
