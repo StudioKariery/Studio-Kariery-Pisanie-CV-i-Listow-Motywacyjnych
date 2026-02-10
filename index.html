@@ -218,9 +218,9 @@ header {
 
     <nav class="main-nav">
         <a href="#pl">Strona główna</a>
-        <a href="#services">Usługi</a>
-        <a href="#pricing">Cennik</a>
-        <a href="#contact">Kontakt</a>
+       <a id="nav-services">Usługi</a>
+       <a id="nav-pricing">Cennik</a>
+       <a id="nav-contact">Kontakt</a>
     </nav>
 
     <div class="lang-switch">
@@ -247,7 +247,7 @@ header {
         </p>
     </section>
 
-    <section>
+    <section id="services">
         <h2>Usługi</h2>
        <div class="box-container">
     <div class="box">
@@ -267,12 +267,12 @@ header {
 </div> 
     </section>
 
-    <section>
+    <section id="pricing">
         <h2>Cennik</h2>
         <p><strong>📄 CV:</strong> £50</p>
 <p><strong>✉️ List motywacyjny:</strong> £30</p>
 <p><strong>📁 Pakiet CV + List:</strong> £65</p>
-<section>
+<section id="contact">
     <h2>Kontakt</h2>
     <p>📧 Email: <a href="mailto:studiokarierykontakt@gmail.com">studiokarierykontakt@gmail.com</a></p>
     <p>📞 Telefon: <a href="tel:07960039379">079 600 39379</a></p>
@@ -315,18 +315,18 @@ header {
 </div>
     
 </div>
-    <section>
+    <section id="services-en">
         <h2>Services</h2>
        
     </section>
 
-    <section>
+    <section id="pricing-en">
         <h2>Pricing</h2>
         <p><strong>📄 CV:</strong> £50</p>
 <p><strong>✉️ Cover letter:</strong> £30</p>
 <p><strong>📁 CV + Cover letter:</strong> £65</p>
     </section>
-<section>
+<section id="contact-en">
     <h2>Contact</h2>
     <p>📧 Email: <a href="mailto:studiokarierykontakt@gmail.com">studiokarierykontakt@gmail.com</a></p>
     <p>📞 Phone: <a href="tel:+447123456789">+44 7123 456 789</a></p>
@@ -346,11 +346,30 @@ header {
     const pl = document.getElementById("pl");
     const en = document.getElementById("en");
 
+    const navServices = document.getElementById("nav-services");
+    const navPricing = document.getElementById("nav-pricing");
+    const navContact = document.getElementById("nav-contact");
+
+    function updateMenuLinks(language) {
+        if (language === "PL") {
+            navServices.onclick = () => document.getElementById("services").scrollIntoView();
+            navPricing.onclick = () => document.getElementById("pricing").scrollIntoView();
+            navContact.onclick = () => document.getElementById("contact").scrollIntoView();
+        } else {
+            navServices.onclick = () => document.getElementById("services-en").scrollIntoView();
+            navPricing.onclick = () => document.getElementById("pricing-en").scrollIntoView();
+            navContact.onclick = () => document.getElementById("contact-en").scrollIntoView();
+        }
+    }
+
+    updateMenuLinks("PL");
+
     plBtn.onclick = () => {
         pl.classList.remove("hidden");
         en.classList.add("hidden");
         plBtn.classList.add("active");
         enBtn.classList.remove("active");
+        updateMenuLinks("PL");
     };
 
     enBtn.onclick = () => {
@@ -358,12 +377,14 @@ header {
         pl.classList.add("hidden");
         enBtn.classList.add("active");
         plBtn.classList.remove("active");
+        updateMenuLinks("EN");
     };
-</script>
+</script>  
 
 </body>
 
 </html>
+
 
 
 
