@@ -339,45 +339,46 @@ header {
     © 2026 Studio Kariery – All rights reserved
 </footer>
 
- <script>
+<script>
     const plBtn = document.getElementById("plBtn");
     const enBtn = document.getElementById("enBtn");
+
     const pl = document.getElementById("pl");
     const en = document.getElementById("en");
 
+    const navHome = document.getElementById("nav-home");
     const navServices = document.getElementById("nav-services");
     const navContact = document.getElementById("nav-contact");
 
-    function updateMenuLinks(language) {
-
-        // ZMIANA TEKSTÓW MENU
+    function updateMenu(language) {
         if (language === "PL") {
+            navHome.textContent = "Strona główna";
             navServices.textContent = "Usługi";
             navContact.textContent = "Kontakt";
-        } else {
-            navServices.textContent = "Services";
-            navContact.textContent = "Contact";
-        }
 
-        // PRZEWIJANIE DO ODPOWIEDNICH SEKCJI
-        if (language === "PL") {
+            navHome.onclick = () => pl.scrollIntoView();
             navServices.onclick = () => document.getElementById("services").scrollIntoView();
             navContact.onclick = () => document.getElementById("contact").scrollIntoView();
         } else {
+            navHome.textContent = "Home";
+            navServices.textContent = "Services";
+            navContact.textContent = "Contact";
+
+            navHome.onclick = () => en.scrollIntoView();
             navServices.onclick = () => document.getElementById("services-en").scrollIntoView();
             navContact.onclick = () => document.getElementById("contact-en").scrollIntoView();
         }
     }
 
-    // DOMYŚLNIE PL
-    updateMenuLinks("PL");
+    // Domyślnie PL
+    updateMenu("PL");
 
     plBtn.onclick = () => {
         pl.classList.remove("hidden");
         en.classList.add("hidden");
         plBtn.classList.add("active");
         enBtn.classList.remove("active");
-        updateMenuLinks("PL");
+        updateMenu("PL");
     };
 
     enBtn.onclick = () => {
@@ -385,12 +386,14 @@ header {
         pl.classList.add("hidden");
         enBtn.classList.add("active");
         plBtn.classList.remove("active");
-        updateMenuLinks("EN");
+        updateMenu("EN");
     };
 </script>
+    
 </body>
 
 </html>
+
 
 
 
