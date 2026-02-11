@@ -3,37 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informacje potrzebne do stworzenia CV – Studio Kariery</title>
+    <title>Lista potrzebnych informacji – Studio Kariery</title>
     <link rel="stylesheet" href="style.css">
 
     <style>
         body {
-            background: #f4f1eb; /* eleganckie, delikatne tło */
+            background: #f4f1eb;
             font-family: Arial, sans-serif;
         }
 
         .form-wrapper {
-            max-width: 850px;
+            max-width: 900px;
             margin: 60px auto;
-            background: white;
+            background: #ffffff;
             padding: 45px;
             border-radius: 14px;
             box-shadow: 0 4px 25px rgba(0,0,0,0.08);
             line-height: 1.7;
         }
 
-        h1 {
+        .form-title {
             text-align: center;
-            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .form-image {
+            display: block;
+            margin: 0 auto 35px auto;
+            max-width: 260px;
+            height: auto;
+        }
+
+        .section-title {
+            color: #c62828;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .sub-title {
+            color: #c62828;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
         }
 
         ul {
-            margin-top: 20px;
+            margin-top: 5px;
+            margin-bottom: 15px;
             padding-left: 20px;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+        }
+
+        .skill-label {
+            color: #c62828;
+            font-weight: bold;
         }
 
         .download-btn {
@@ -45,7 +75,7 @@
             padding: 12px 20px;
             border-radius: 8px;
             text-decoration: none;
-            margin-top: 30px;
+            margin-top: 35px;
             font-weight: bold;
         }
 
@@ -59,23 +89,59 @@
 
 <div class="form-wrapper">
 
-    <h1>Informacje potrzebne do stworzenia CV</h1>
+    <div class="form-title">
+        Lista potrzebnych informacji w celu wypisania CV
+    </div>
 
-    <p><strong>Aby przygotować dla Ciebie profesjonalne CV, potrzebuję następujących informacji:</strong></p>
+    <img src="formularz-header.png" alt="Studio Kariery - Pisanie CV i Listów Motywacyjnych" class="form-image">
+
+    <div class="section-title">1. Dane osobowe i kontaktowe</div>
 
     <ul>
-        <li>Twoje aktualne CV (jeśli posiadasz)</li>
-        <li>Lista poprzednich miejsc pracy wraz z datami zatrudnienia</li>
-        <li>Zakres obowiązków na każdym stanowisku</li>
-        <li>Wykształcenie – szkoły, kierunki, daty</li>
-        <li>Kursy, szkolenia, certyfikaty</li>
-        <li>Znajomość języków obcych</li>
-        <li>Umiejętności twarde i miękkie</li>
-        <li>Link do ogłoszenia, na które aplikujesz (opcjonalnie)</li>
-        <li>Numer telefonu i preferowany sposób kontaktu</li>
+        <li>Imię i nazwisko oraz aktualny tytuł zawodowy</li>
+        <li>Numer telefonu i adres e-mail</li>
+        <li>Lokalizacja – miasto wystarczy (np. Glen Parva)</li>
+        <li>Link do profilu na LinkedIn lub Indeed (jeśli posiadasz)</li>
     </ul>
 
-    <p>Jeśli nie masz CV lub nie wiesz, jak opisać swoje doświadczenie – spokojnie. Pomogę Ci wszystko uporządkować.</p>
+    <div class="section-title">2. Doświadczenie zawodowe (od najnowszego)</div>
+
+    <ul>
+        <li>Pełna nazwa firmy oraz zajmowane stanowisko</li>
+        <li>Daty rozpoczęcia i zakończenia pracy (miesiąc i rok)</li>
+        <li>Kluczowe obowiązki</li>
+        <li>Osiągnięcia – liczby, procenty, konkretne projekty (np. „zwiększenie sprzedaży o 20%”). Jeżeli takich nie ma, to nie trzeba.</li>
+    </ul>
+
+    <div class="section-title">3. Wykształcenie, kursy i certyfikaty</div>
+
+    <ul>
+        <li>Szkoły/Uczelnie: nazwa placówki, kierunek, uzyskany tytuł i rok ukończenia</li>
+        <li>Kursy i szkolenia: pełna nazwa kursu, organizator i data uzyskania certyfikatu</li>
+        <li>Uprawnienia: np. prawo jazdy (kategorie), licencje zawodowe</li>
+    </ul>
+
+    <div class="section-title">4. Umiejętności (Twarde i Miękkie)</div>
+
+    <p>
+        <span class="skill-label">Twarde:</span>
+        znajomość programów (np. Excel, SAP, Python), obsługa maszyn, języki obce (z określeniem poziomu, np. B2).
+    </p>
+    <p>
+        <span class="skill-label">Miękkie:</span>
+        np. zarządzanie zespołem, negocjacje, odporność na stres (ważne zwłaszcza w obsłudze klienta).
+    </p>
+
+    <div class="section-title">5. Dodatkowe informacje</div>
+
+    <div class="sub-title">Podsumowanie zawodowe:</div>
+    <p>Opisz w 2–3 zdaniach, kim jesteś, co potrafisz i czego szukasz (tzw. „cel zawodowy”).</p>
+
+    <div class="sub-title">Zainteresowania:</div>
+    <p>2–3 hobby, które pokazują Ciebie jako ciekawą osobę (najlepiej unikać ogólników typu „kino, muzyka”).</p>
+
+    <div class="sub-title">Link do oferty pracy:</div>
+    <p>Jeśli CV ma być „szyte na miarę”, muszę widzieć ogłoszenie, na które chcesz aplikować.</p>
 
     <a href="https://docs.google.com/document/d/1sNfQzQWBqumpuWyjWOJcuulR-3aM7WZjrhjVRRF3c0o/export?format=pdf"
        class="download-btn" target="_blank">
