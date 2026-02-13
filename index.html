@@ -8,7 +8,7 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: #ffffff;
             color: #222;
         }
@@ -217,8 +217,40 @@ header {
     max-width: 320px;
     box-sizing: border-box;
 }
-    
+#about h2,
+#about-en h2 {
+    position: relative;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+#about h2::before,
+#about-en h2::before {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #d4af37;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+}    
+#about,
+#about-en {
+    background: #fafafa;
+    padding: 60px 20px;
+    border-radius: 12px;
+}
+
+#about p,
+#about-en p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 500;
+    color: #333;
+}
     </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -532,6 +564,7 @@ header {
 </body>
 
 </html>
+
 
 
 
