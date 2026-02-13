@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista potrzebnych informacji – Studio Kariery</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             background: #f4f1eb;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         .form-wrapper {
@@ -19,15 +20,30 @@
             padding: 45px;
             border-radius: 14px;
             box-shadow: 0 4px 25px rgba(0,0,0,0.08);
-            line-height: 1.7;
+            line-height: 1.8;
+            letter-spacing: 0.01em;
         }
 
-        .form-title {
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
+       .form-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-title::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    background: #d4af37;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 2px;
+}
 
         .form-image {
             display: block;
