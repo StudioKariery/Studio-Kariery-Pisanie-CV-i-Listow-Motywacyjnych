@@ -140,11 +140,27 @@ li {
     background: #008000;
     color: white;
 }
+.home-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
 
+.home-switch span {
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #5a2a27;
+    transition: 0.2s;
+}
+
+.home-switch span:hover {
+    background: #f4e8d8;
+}
 </style>
 
-        
-    </style>
+
 </head>
 
 <body>
@@ -161,7 +177,9 @@ li {
     <span onclick="location.href='formularz.html'">PL</span>
     <span class="active">EN</span>
 </div>
-
+<div class="home-switch">
+    <span onclick="location.href='index-en.html'">Home</span>
+</div>
     <div class="section-title">1. Personal and contact details</div>
 
     <ul>
