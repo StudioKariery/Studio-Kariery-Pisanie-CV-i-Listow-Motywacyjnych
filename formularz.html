@@ -140,7 +140,25 @@ li {
     background: #008000;
     color: white;
 }
-          </style>
+.home-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.home-switch span {
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #5a2a27;
+    transition: 0.2s;
+}
+
+.home-switch span:hover {
+    background: #f4e8d8;
+}        
+ </style>
 </head>
 
 <body>
@@ -157,7 +175,9 @@ li {
     <span class="active">PL</span>
     <span onclick="location.href='form-en.html'">EN</span>
 </div>
-
+<div class="home-switch">
+    <span onclick="location.href='index.html'">Strona główna</span>
+</div>
     <div class="section-title">1. Dane osobowe i kontaktowe</div>
 
     <ul>
