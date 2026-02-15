@@ -116,9 +116,31 @@ li {
     transform: translateY(-1px);
     box-shadow: 0 5px 16px rgba(0,0,0,0.18);
 }       
+.lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
 
-        
-    </style>
+.lang-switch span {
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #008000;
+    transition: 0.2s;
+}
+
+.lang-switch span:hover {
+    background: #e6ffe6;
+}
+
+.active {
+    background: #008000;
+    color: white;
+}
+          </style>
 </head>
 
 <body>
@@ -131,12 +153,10 @@ li {
     <div style="text-align: center; margin: 20px 0;">
     <img src="logo.png" alt="Logo" style="max-width: 300px; height: auto;">
 </div>
-
-   <div class="lang-switch">
-    <a class="active">PL</a>
-    <span>|</span>
-    <a href="form-en.html">EN</a>
-</div> 
+    <div class="lang-switch">
+    <span class="active">PL</span>
+    <span onclick="location.href='form-en.html'">EN</span>
+</div>
 
     <div class="section-title">1. Dane osobowe i kontaktowe</div>
 
